@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="tr">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="dark light"><title>Süper admin · Eğitim Oturum Seçim Uygulaması</title><link rel="stylesheet" href="styles.css"></head>
+<body data-page-role="SUPER_ADMIN">
+  <a class="skip-link" href="#main">İçeriğe geç</a>
+  <header class="topbar"><div class="topbar-inner"><a class="brand" href="super_admin.html">Eğitim Oturum Seçim Uygulaması</a><div class="top-actions"><span id="actorCode" class="actor-code"></span><button id="refreshBtn" class="button quiet" type="button">Yenile</button><button id="logoutBtn" class="button quiet" type="button">Çıkış</button></div></div></header>
+  <main id="main" class="page-shell">
+    <section class="page-heading heading-row"><div><p id="groupTitle" class="eyebrow">Süper admin</p><h1>Gruplar ve oturumlar</h1></div><button id="exportBtn" class="button primary" type="button" disabled>Tüm grupları Excel'e aktar</button></section>
+    <p id="statusMessage" class="message info" role="status" aria-live="polite" hidden></p>
+    <section class="admin-tools" aria-label="Oturum ve tarih yönetimi">
+      <form id="slotForm" class="panel" novalidate><h2>Oturum ekle</h2><div class="form-grid"><div class="field full-field"><label for="slotGroup">Grup</label><select id="slotGroup" required disabled></select></div><div class="field full-field"><label for="slotDate">Oturum tarihi</label><input id="slotDate" type="date" required></div><div class="field"><label for="startTime">Başlangıç saati</label><input id="startTime" type="time" step="60" required></div><div class="field"><label for="endTime">Bitiş saati</label><input id="endTime" type="time" step="60" required></div></div><p class="form-hint">Türkiye saati · Tüm grupların oturumlarıyla çakışma kontrol edilir.</p><button id="addSlotBtn" type="submit" class="button primary" disabled>Oturum ekle</button></form>
+      <form id="deadlineForm" class="panel" novalidate><h2>Seçim yapılabilecek son tarih</h2><div class="field"><label for="deadlineGroup">Grup</label><select id="deadlineGroup" required disabled></select></div><div class="field"><label for="deadlineInput">Tarih ve saat · Türkiye saati</label><input id="deadlineInput" type="datetime-local" step="60" required></div><p id="deadlineDraftMessage" class="message info" role="status" hidden></p><button id="deadlineSave" type="submit" class="button primary" disabled>Son tarihi kaydet</button></form>
+    </section>
+    <div class="filter-bar"><div class="field"><label for="groupFilter">Gösterilen grup</label><select id="groupFilter"><option value="">Tüm gruplar</option></select></div><p class="form-hint">Excel raporu her zaman tüm grupları içerir.</p></div>
+    <section id="reportSummary" class="summary-grid" aria-label="Seçim özeti"></section>
+    <section class="report-section" aria-labelledby="slotReportTitle"><div class="section-heading"><div><h2 id="slotReportTitle">Oturum özeti</h2><p>Ortak seçim oranı, gruptaki tüm yöneticiler üzerinden hesaplanır.</p></div></div><div id="slotReports"><p class="empty-state">Raporlar yükleniyor…</p></div></section>
+    <section class="report-section" aria-labelledby="managerReportTitle"><div class="section-heading"><h2 id="managerReportTitle">Yönetici seçimleri</h2><div class="search-control"><label for="managerSearch">Yönetici kodu ara</label><input id="managerSearch" type="search" autocomplete="off" spellcheck="false"></div></div><div id="managerReports"></div></section>
+    <noscript><p class="message error">Grupları yönetmek için JavaScript'i etkinleştirin.</p></noscript>
+  </main>
+  <dialog id="confirmDialog" aria-labelledby="dialogTitle" aria-describedby="dialogMessage"><h2 id="dialogTitle"></h2><p id="dialogMessage"></p><div class="button-row"><button id="dialogCancel" class="button quiet" type="button">Vazgeç</button><button id="dialogConfirm" class="button danger" type="button">Onayla</button></div></dialog>
+  <script type="module" src="admin.js"></script>
+</body>
+</html>

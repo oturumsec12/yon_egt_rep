@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="tr">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="dark light"><title>Oturumlar · Eğitim Oturum Seçim Uygulaması</title><link rel="stylesheet" href="styles.css"></head>
+<body>
+  <a class="skip-link" href="#main">İçeriğe geç</a>
+  <header class="topbar"><div class="topbar-inner"><a class="brand" href="secim.html">Eğitim Oturum Seçim Uygulaması</a><div class="top-actions"><span id="actorCode" class="actor-code"></span><button id="refreshBtn" class="button quiet" type="button">Yenile</button><button id="logoutBtn" class="button quiet" type="button">Çıkış</button></div></div></header>
+  <main id="main" class="page-shell">
+    <section class="page-heading"><p id="groupTitle" class="eyebrow">Grubunuz yükleniyor…</p><h1>Oturumlar</h1><p>Uygun oturumları seçip kaydedebilirsiniz.</p></section>
+    <div class="deadline-banner"><span>Seçim yapılabilecek son tarih</span><strong id="deadlineText">Yükleniyor…</strong><span id="deadlineState" class="badge neutral"></span></div>
+    <p id="statusMessage" class="message info" role="status" aria-live="polite" hidden></p>
+    <form id="selectionForm">
+      <p id="draftMessage" class="message info" role="status" aria-live="polite" hidden></p>
+      <label id="reviewArea" class="review-box" hidden><input id="reviewChanges" type="checkbox"> Güncel oturumları ve değişikliklerimi gözden geçirdim.</label>
+      <div id="calendar" class="slot-grid" aria-label="Grubunuzun oturum seçenekleri"><p class="empty-state">Oturumlar yükleniyor…</p></div>
+      <div class="save-bar"><p id="selectionCount">Seçimler yükleniyor…</p><div class="button-row"><button id="discardChanges" class="button quiet" type="button" disabled>Vazgeç</button><button id="saveSelections" class="button primary" type="submit" disabled>Seçimleri kaydet</button></div></div>
+    </form>
+    <noscript><p class="message error">Oturumları görüntülemek için JavaScript'i etkinleştirin.</p></noscript>
+  </main>
+  <dialog id="confirmDialog" aria-labelledby="dialogTitle" aria-describedby="dialogMessage"><h2 id="dialogTitle"></h2><p id="dialogMessage"></p><div class="button-row"><button id="dialogCancel" class="button quiet" type="button">Vazgeç</button><button id="dialogConfirm" class="button danger" type="button">Onayla</button></div></dialog>
+  <script type="module" src="secim.js"></script>
+</body>
+</html>

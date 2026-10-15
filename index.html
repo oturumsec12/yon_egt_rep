@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="tr">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="dark light"><title>Giriş · Eğitim Oturum Seçim Uygulaması</title><link rel="stylesheet" href="styles.css"></head>
+<body class="login-page">
+  <main class="login-shell">
+    <section class="login-card" aria-labelledby="loginTitle">
+      <h1 id="loginTitle">Eğitim Oturum<br>Seçim Uygulaması</h1>
+      <p id="loginIntro" class="muted">Size verilen 6 karakterli kodla giriş yapabilirsiniz.</p>
+      <form id="loginForm" novalidate>
+        <label for="code">Giriş kodunuz</label>
+        <input id="code" name="code" class="code-input" type="text" maxlength="6" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-describedby="loginIntro loginError" aria-invalid="false" required>
+        <p id="loginError" class="message error" role="alert" hidden></p>
+        <button id="loginButton" class="button primary full" type="submit">Giriş yap</button>
+      </form>
+      <noscript><p class="message error">Giriş yapmak için tarayıcınızda JavaScript'i etkinleştirin.</p></noscript>
+    </section>
+  </main>
+  <script type="module" src="login.js"></script>
+</body>
+</html>

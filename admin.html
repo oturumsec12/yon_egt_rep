@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="tr">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="dark light"><title>Grup raporu · Eğitim Oturum Seçim Uygulaması</title><link rel="stylesheet" href="styles.css"></head>
+<body data-page-role="GROUP_ADMIN">
+  <a class="skip-link" href="#main">İçeriğe geç</a>
+  <header class="topbar"><div class="topbar-inner"><a class="brand" href="admin.html">Eğitim Oturum Seçim Uygulaması</a><div class="top-actions"><span id="actorCode" class="actor-code"></span><button id="refreshBtn" class="button quiet" type="button">Yenile</button><button id="logoutBtn" class="button quiet" type="button">Çıkış</button></div></div></header>
+  <main id="main" class="page-shell">
+    <section class="page-heading heading-row"><div><p id="groupTitle" class="eyebrow">Grup admini</p><h1>Grup raporu</h1></div><button id="exportBtn" class="button primary" type="button" disabled>Excel'e aktar</button></section>
+    <p id="statusMessage" class="message info" role="status" aria-live="polite" hidden></p>
+    <section id="reportSummary" class="summary-grid" aria-label="Seçim özeti"></section>
+    <section class="report-section" aria-labelledby="slotReportTitle"><div class="section-heading"><div><h2 id="slotReportTitle">Oturum özeti</h2><p>Ortak seçim oranı, gruptaki tüm yöneticiler üzerinden hesaplanır.</p></div></div><div id="slotReports"><p class="empty-state">Raporlar yükleniyor…</p></div></section>
+    <section class="report-section" aria-labelledby="managerReportTitle"><div class="section-heading"><h2 id="managerReportTitle">Yönetici seçimleri</h2><div class="search-control"><label for="managerSearch">Yönetici kodu ara</label><input id="managerSearch" type="search" autocomplete="off" spellcheck="false"></div></div><div id="managerReports"></div></section>
+    <noscript><p class="message error">Raporları görüntülemek için JavaScript'i etkinleştirin.</p></noscript>
+  </main>
+  <script type="module" src="admin.js"></script>
+</body>
+</html>
