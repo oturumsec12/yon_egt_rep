@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="tr">
 <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="dark light"><title>Oturumlar · Eğitim Oturum Seçim Uygulaması</title><link rel="stylesheet" href="styles.css"></head>
-<body>
+<body class="selection-page">
   <a class="skip-link" href="#main">İçeriğe geç</a>
   <header class="topbar"><div class="topbar-inner"><a class="brand" href="secim.html">Eğitim Oturum Seçim Uygulaması</a><div class="top-actions"><span id="actorCode" class="actor-code"></span><button id="refreshBtn" class="button quiet" type="button">Yenile</button><button id="logoutBtn" class="button quiet" type="button">Çıkış</button></div></div></header>
   <main id="main" class="page-shell">
@@ -12,7 +12,7 @@
       <p id="draftMessage" class="message info" role="status" aria-live="polite" hidden></p>
       <label id="reviewArea" class="review-box" hidden><input id="reviewChanges" type="checkbox"> Güncel oturumları ve değişikliklerimi gözden geçirdim.</label>
       <div id="calendar" class="slot-grid" aria-label="Grubunuzun oturum seçenekleri"><p class="empty-state">Oturumlar yükleniyor…</p></div>
-      <div class="save-bar"><p id="selectionCount">Seçimler yükleniyor…</p><div class="button-row"><button id="discardChanges" class="button quiet" type="button" disabled>Vazgeç</button><button id="saveSelections" class="button primary" type="submit" disabled>Seçimleri kaydet</button></div></div>
+      <div class="save-bar"><div class="save-bar-inner"><p id="selectionCount">Seçimler yükleniyor…</p><div class="button-row"><button id="discardChanges" class="button quiet" type="button" disabled>Vazgeç</button><button id="saveSelections" class="button primary" type="submit" disabled>Seçimleri kaydet</button></div></div></div>
     </form>
     <noscript><p class="message error">Oturumları görüntülemek için JavaScript'i etkinleştirin.</p></noscript>
   </main>
