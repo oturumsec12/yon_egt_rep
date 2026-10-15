@@ -65,6 +65,8 @@ a { color: inherit; }
 .message.warning { border-color: #a48236; background: #f6eac9; color: #61460c; }
 .review-box { display: flex; gap: 10px; align-items: flex-start; padding: 12px 2px 20px; font-weight: 650; }
 .review-box input { margin-top: 4px; width: 19px; height: 19px; accent-color: #246dc8; flex-shrink: 0; }
+.selection-page .selection-guide { margin-bottom: 20px; padding: 16px 20px; border: 1px solid #899bb2; border-radius: 10px; background: #e7edf5; color: #23354b; font-size: .95rem; line-height: 1.65; overflow-wrap: anywhere; }
+.selection-page .selection-guide-emphasis { color: #9f1d2b; font-weight: 800; text-decoration-line: underline; text-decoration-thickness: 2px; text-underline-offset: .16em; }
 .slot-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
 .slot-card { display: block; color: var(--text); background: #030507; border: 2px solid #546176; border-radius: 14px; padding: 20px; min-width: 0; }
 .slot-card.available, .slot-card.best { border-color: var(--green); }
